@@ -28,7 +28,7 @@ from FallenMusic import BOT_USERNAME, app, fallendb, pytgcalls
 from FallenMusic.Helpers import _clear_, admin_check, buttons, close_key, gen_thumb
 
 
-@app.on_message(filters.command(["skip", "next"]) | filters.command(["تخطي","التالى","التالي"],prefixes= ["/", "!","","#"]) & filters.group)
+@app.on_message(filters.command(["skip", "next"]) | filters.command(["تخطي","غيرها","غير"],prefixes= ["/", "!","","#"]) & filters.group)
 @admin_check
 async def skip_str(_, message: Message):
     try:
@@ -41,7 +41,7 @@ async def skip_str(_, message: Message):
             await _clear_(message.chat.id)
             await pytgcalls.leave_group_call(message.chat.id)
             await message.reply_text(
-                text=f"⎊ الـتـالـي 🥺\n \n⎊ بواسطة : {message.from_user.mention} 🥀\n\n**⎊ مفيش اغاني** {message.chat.title}, **🕷**",
+                text=f"⌔︙ تم التخطي \n \n⌔︙ بواسطة : {message.from_user.mention} \n\n**⌔︙ لايوجد اغاني** {message.chat.title}, ****",
                 reply_markup=close_key,
             )
         except:
@@ -66,12 +66,12 @@ async def skip_str(_, message: Message):
             return await pytgcalls.leave_group_call(message.chat.id)
 
         await message.reply_text(
-            text=f"⎊ الـتـالي 🥺\n \n⎊ بواسطة : {message.from_user.mention} 🥀\n\n**⎊ مفيش اغاني** {message.chat.title}, **🕷**",
+            text=f"⌔︙ تم التخطي \n \n⌔︙ بواسطة : {message.from_user.mention} \n\n**⌔︙ لايوجد اغاني** {message.chat.title}, ****",
             reply_markup=close_key,
         )
         img = await gen_thumb(videoid, user_id)
         return await message.reply_photo(
             photo=img,
-            caption=f"**⎊ تم التشغيل ✅**\n\n⎊ **العنوان :** [{title[:27]}](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n⎊ **المدة :** `{duration}` دقيقه\n⎊ **بواسطه :** {req_by}",
+            caption=f"**⌔︙ بدء التشغيل 🎙**\n\n⎊ **معلومات حول :** [{title[:27]}](https://t.me/{BOT_USERNAME}?start=info_{videoid})\n⎊  **⌔︙ طلب الحلو :  :** {req_by}",
             reply_markup=buttons,
         )
