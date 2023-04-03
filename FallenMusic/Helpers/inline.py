@@ -26,7 +26,7 @@ import config
 from FallenMusic import BOT_USERNAME
 
 close_key = InlineKeyboardMarkup(
-    [[InlineKeyboardButton(text="• مسح •", callback_data="close")]]
+    [[InlineKeyboardButton(text="• اغلاق •", callback_data="close")]]
 )
 
 
@@ -49,16 +49,16 @@ pm_buttons = [
             url=f"https://t.me/{BOT_USERNAME}?startgroup=true",
         )
     ],
-    [InlineKeyboardButton(text="• اوامࢪ التشغيل •", callback_data="fallen_help")],
+    [InlineKeyboardButton(text="‹ اوامࢪ التشغيل  ›", callback_data="fallen_help")],
     [
-        InlineKeyboardButton(text="• سوࢪس الخليفه •", url=config.SUPPORT_CHANNEL),
-        InlineKeyboardButton(text="• جـروب الدعم •", url=config.SUPPORT_CHAT),
+        InlineKeyboardButton(text=" ‹ سوࢪس الخليفه  ›", url=config.SUPPORT_CHANNEL),
+        InlineKeyboardButton(text="‹ قـنـاة الـبـوت  ›", url=config.SUPPORT_CHAT),
     ],
     [
         InlineKeyboardButton(
-            text="• مطوࢪ السورس •", url="https://t.me/H_M_Dr"
+            text="‹ مطوࢪ السورس  ›", url="https://t.me/H_M_Dr"
         ),
-        InlineKeyboardButton(text="• مالك البوت •", user_id=config.OWNER_ID),
+        InlineKeyboardButton(text="‹ مالك البوت  ›", user_id=config.OWNER_ID),
     ],
 ]
 
@@ -71,14 +71,14 @@ gp_buttons = [
         )
     ],
     [
-        InlineKeyboardButton(text="• سوࢪس الخليفه •", url=config.SUPPORT_CHANNEL),
-        InlineKeyboardButton(text="• جࢪوب الدعم •", url=config.SUPPORT_CHAT),
+        InlineKeyboardButton(text="‹ سوࢪس الخليفه •", url=config.SUPPORT_CHANNEL),
+        InlineKeyboardButton(text="‹ قـنـاة الـبـوت  ›", url=config.SUPPORT_CHAT),
     ],
     [
         InlineKeyboardButton(
-            text="• مطوࢪ السورس •", url="https://t.me/H_M_Dr"
+            text="‹ مطوࢪ السورس  ›", url="https://t.me/H_M_Dr"
         ),
-        InlineKeyboardButton(text="• مالك البوت •", user_id=config.OWNER_ID),
+        InlineKeyboardButton(text="‹ مالك البوت  ›", user_id=config.OWNER_ID),
     ],
 ]
 
@@ -102,9 +102,9 @@ helpmenu = [
 
 
 help_back = [
-    [InlineKeyboardButton(text="• جࢪوب الدعم •", url=config.SUPPORT_CHAT)],
+    [InlineKeyboardButton(text="• قـنـاة الـبـوت •", url=config.SUPPORT_CHAT)],
     [
         InlineKeyboardButton(text="• ࢪجوع •", callback_data="fallen_help"),
-        InlineKeyboardButton(text="• مسح •", callback_data="close"),
+        InlineKeyboardButton(text="• اغلاق •", callback_data="close"),
     ],
 ]
